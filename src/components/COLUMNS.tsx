@@ -1,12 +1,16 @@
+//@ts-nocheck
+
 export const COLUMNS = [
   {
     Header: 'Id',
     accessor: 'id',
   },
   {
-    Header: 'First Name',
-    accessor: 'first_name',
+    Header: 'Name',
+    accessor: (d) => `${d.first_name} ${d.last_name}`,
+    // Cell: ({ accessor }) => accessor['first_name'],
   },
+
   {
     Header: 'Last Name',
     accessor: 'last_name',
